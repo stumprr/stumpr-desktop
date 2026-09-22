@@ -1,0 +1,26 @@
+{
+	"plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+	"semi": true,
+	"tabWidth": 2,
+	"useTabs": true,
+	"printWidth": 140,
+	"singleQuote": false,
+	"trailingComma": "all",
+	"jsxSingleQuote": false,
+	"objectWrap": "preserve",
+	"tailwindStylesheet": "./src/renderer/src/assets/styles.css",
+	"tailwindFunctions": ["cn", "cva"],
+	"importOrder": [
+		"^(react/(.*)$)|^(react$)",
+		"^(electron/(.*)$)|^(electron$)",
+		"<THIRD_PARTY_MODULES>",
+		"",
+		"^@/lib/(.*)$",
+		"^@/hooks/(.*)$",
+		"^@/components/ui/(.*)$",
+		"^@/components/(.*)$",
+		"^@/assets/(.*)$",
+		"",
+		"^[./]"
+	]
+}
