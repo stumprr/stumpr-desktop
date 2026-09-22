@@ -1,11 +1,14 @@
-import electronLogo from "./assets/electron.svg";
+import { createFileRoute } from "@tanstack/react-router";
 
-function App(): React.JSX.Element {
+export const Route = createFileRoute("/")({
+	component: HomeRoute,
+});
+
+function HomeRoute() {
 	const ipcHandle = (): void => window.electron.ipcRenderer.send("ping");
 
 	return (
 		<main className="flex flex-1 flex-col items-center justify-center gap-4">
-			<img alt="logo" className="size-40" src={electronLogo} />
 			<div className="creator">Powered by electron-vite</div>
 			<div className="text">
 				Build an Electron app with <span className="react">React</span>
@@ -29,5 +32,3 @@ function App(): React.JSX.Element {
 		</main>
 	);
 }
-
-export default App;
